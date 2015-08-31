@@ -1,15 +1,13 @@
-
 /// <reference path='./typings/tsd.d.ts' />
 
 import express = require('express');
 import path = require('path');
-import favicon = require('serve-favicon');
 import logger = require('morgan');
 import cookieParser = require('cookie-parser');
 import bodyParser = require('body-parser');
 
 import routes = require('./routes/index');
-import users = require('./routes/users');
+import registration = require('./routes/registration');
 
 var app = express();
 
@@ -26,7 +24,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-app.use('/users', users);
+app.use('/registration', registration);
 
 //catch 404 and forward to error handler
 app.use((req, res, next) => {

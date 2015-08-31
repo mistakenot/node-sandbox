@@ -9,7 +9,7 @@
       "commit": "32f0a90dab26f70b206407ac24d4d622d0f0f408"
     },
     "node/node.d.ts": {
-      "commit": "32f0a90dab26f70b206407ac24d4d622d0f0f408"
+      "commit": "d2bab5738b84b91d8ee18a68c7b379a9714cf82f"
     },
     "serve-favicon/serve-favicon.d.ts": {
       "commit": "32f0a90dab26f70b206407ac24d4d622d0f0f408"
@@ -25,6 +25,9 @@
     },
     "debug/debug.d.ts": {
       "commit": "32f0a90dab26f70b206407ac24d4d622d0f0f408"
+    },
+    "gulp/gulp.d.ts": {
+      "commit": "d2bab5738b84b91d8ee18a68c7b379a9714cf82f"
     }
   }
 }

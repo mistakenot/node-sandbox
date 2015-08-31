@@ -10,10 +10,17 @@
     "cookie-parser": "~1.3.3",
     "debug": "~2.1.1",
     "express": "~4.11.1",
+    "firebase": "*",
     "jade": "~1.9.1",
+    "mailin": "*",
     "morgan": "~1.5.1",
     "serve-favicon": "~2.2.0",
     "tsd": "0.6.0-beta.5",
     "typescript": "^1.4.1"
+  },
+  "devDependencies": {
+    "gulp": "~3.9.0",
+    "gulp-jasmine": "~2.0.1",
+    "jasmine":"*"
   }
 }

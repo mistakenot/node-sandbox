@@ -1,11 +1,11 @@
 /// <reference path='../typings/tsd.d.ts' />
 
 import express = require('express');
+
 var router = express.Router();
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+router.put('/', function(req, res, next) {
+  res.send('worked');
 });
 
 export = router;

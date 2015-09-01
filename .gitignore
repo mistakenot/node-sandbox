@@ -1,5 +1,10 @@
 node_modules
+bower_components
 typings
 **/*.js
 **/*.js.map
 .idea
+public/browserify.js
+
+!gulpfile.js
+!browserify.js

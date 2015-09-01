@@ -3,26 +3,34 @@
 module Postman {
   export class RegisterController {
 
-    public static $inject = [
-      '$scope',
-      '$http'
-    ];
-
+    public static $inject = ['$scope','http','url'];
+    
     constructor (
       private $scope: IRegisterControllerScope,
-      private $http: angular.IHttpService
+      private $http: angular.IHttpService,
+      private url: string
     ) {
       $scope.email = '';
       $scope.password = '';
     }
 
-    submit(): angular.IPromise<IRegistration> {
-      return this.$http.put<IRegistration>('http://localhost:3000/registration', {});
+    submitRegistration(): angular.IPromise<User> {
+      return this.$http.put<User>(
+        this.url + '/registration',
+        new Registration(this.$scope.email, this.$scope.password)
+      );
+    }
+
+    submitLogin(): angular.IPromise<User> {
+      return this.$http.put<User>(
+        this.url + '/login',
+        new Registration(this.$scope.email, this.$scope.password)
+      );
     }
   }
 
   export interface IRegisterControllerScope extends angular.IScope {
-    email: String;
-    password: String;
+    email: string;
+    password: string;
   }
 }

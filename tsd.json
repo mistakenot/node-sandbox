@@ -28,6 +28,12 @@
     },
     "gulp/gulp.d.ts": {
       "commit": "d2bab5738b84b91d8ee18a68c7b379a9714cf82f"
+    },
+    "firebase/firebase.d.ts": {
+      "commit": "a213223e1bdf40b280ebf765b42e7ef3da9394dc"
+    },
+    "jasmine/jasmine.d.ts": {
+      "commit": "a213223e1bdf40b280ebf765b42e7ef3da9394dc"
     }
   }
 }

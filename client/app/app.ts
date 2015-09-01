@@ -2,19 +2,20 @@
 
 module Postman {
   var app = angular.module('app', [
-    'ngResource'
+    'ngResource',
+    'ngRoute'
   ]);
 
   app.value('url', 'http://localhost:3000/');
 
-  app.config(["$rouetProvider", ($routeProvider: angular.route.IRouteProvider) => {
+  app.config(["$routeProvider", ($routeProvider: angular.route.IRouteProvider) => {
     $routeProvider
       .when('/', {
-        templateUrl: '',
-        controller: ''
+        templateUrl: 'views/home.html',
+        controller: 'controller/homeController.js'
       })
       .otherwise({
-        redirectTo: ''
+        redirectTo: '/'
       });
   }]);
 }

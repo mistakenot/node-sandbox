@@ -23,6 +23,7 @@
     "gulp-jasmine": "~2.0.1",
     "gulp-typescript": "*",
     "jasmine": "*",
-    "gulp-browserify": "~0.5.1"
+    "gulp-browserify": "~0.5.1",
+    "gulp-shell": "~0.4.3"
   }
 }

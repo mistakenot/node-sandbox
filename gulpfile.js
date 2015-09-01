@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var tsc = require('gulp-typescript');
 var browserify = require('gulp-browserify');
+var shell = require('gulp-shell');
 
 var copy = function () {
 };
@@ -21,14 +22,25 @@ gulp.task('build-client', function() {
     .pipe(browserify())
     .pipe(gulp.dest('./public/javascript'));
 
-  // Copy app directory
+  // Copy app js
   gulp.src(['client/**/*.js'], {
       base: 'client'
     })
     .pipe(gulp.dest('public'));
 
+  // Copy app views
+  gulp.src(['client/**/*.html'], {
+      base: 'client'
+    })
+    .pipe(gulp.dest('public'))
 });
 
 gulp.task('build-server', function() {
 
+});
+
+gulp.task('run', function() {
+  return gulp.src('').pipe(
+    shell(['./run.sh'])
+  );
 });

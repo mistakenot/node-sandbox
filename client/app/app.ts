@@ -1,21 +1,23 @@
 /// <reference path='../typings/tsd.d.ts'/>
+/// <reference path='./controller/HomeController'/>
 
-module Postman {
-  var app = angular.module('app', [
-    'ngResource',
-    'ngRoute'
-  ]);
 
-  app.value('url', 'http://localhost:3000/');
+var app = angular.module('app', [
+  'ngResource',
+  'ngRoute'
+]);
 
-  app.config(["$routeProvider", ($routeProvider: angular.route.IRouteProvider) => {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/home.html',
-        controller: 'controller/homeController.js'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
-  }]);
-}
+app.value('url', 'http://localhost:3000/');
+
+app.controller('HomeController', HomeController);
+
+app.config(["$routeProvider", ($routeProvider: angular.route.IRouteProvider) => {
+  $routeProvider
+    .when('/', {
+      templateUrl: 'app/views/home.html',
+      controller: 'HomeController'
+    })
+    .otherwise({
+      redirectTo: '/'
+    });
+}]);

@@ -24,6 +24,7 @@
     "gulp-typescript": "*",
     "jasmine": "*",
     "gulp-browserify": "~0.5.1",
-    "gulp-shell": "~0.4.3"
+    "gulp-shell": "~0.4.3",
+    "gulp-clean": "~0.3.1"
   }
 }

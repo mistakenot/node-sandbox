@@ -2,21 +2,15 @@ var gulp = require('gulp');
 var tsc = require('gulp-typescript');
 var browserify = require('gulp-browserify');
 var shell = require('gulp-shell');
+var clean = require('gulp-clean');
 
-var copy = function () {
-};
+gulp.task('build', function() {
+  // Delete old files
+  //gulp.src('./public/app/**/*', {read: false})
+  //  .pipe(clean({force: true}));
+  //gulp.src('./public/javascript/**/*', {read: false})
+  //  .pipe(clean());
 
-var build = function () {
-};
-
-gulp.task('default', function () {
-    copy();
-});
-
-gulp.task('build', function () {
-
-});
-gulp.task('build-client', function() {
   // Build dependencies into single file
   gulp.src('./browserify.js')
     .pipe(browserify())
@@ -40,7 +34,14 @@ gulp.task('build-server', function() {
 });
 
 gulp.task('run', function() {
+  gulp.start('build');
   return gulp.src('').pipe(
     shell(['./run.sh'])
   );
 });
+
+gulp.task('compile', function() {
+  return gulp.src('').pipe(
+    shell(['./run.sh'])
+  );
+})
